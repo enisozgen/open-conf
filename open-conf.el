@@ -1,4 +1,4 @@
-;;; open-conf.el --- Open file via M-x buffer
+;;; open-conf.el --- Open files via M-x buffer
 
 ;; Copyright (C) 2021 Enis OEZGEN
 
@@ -25,8 +25,10 @@
 
 ;;; Commentary:
 
-;; open-conf allows you to open files quickly from M-x buffer with given alias.
-;;
+;; open-conf allows you to open files quickly via M-x command with given alias.
+;; Example:
+;; (defun-open-conf "bashrc" "~/.bashrc")
+
 ;; Please see README.md from the same repository for documentation.
 
 ;;; Code:
@@ -41,7 +43,6 @@
 (defun open-conf (filepath)
   (switch-to-buffer
    (find-file-noselect filepath)))
-
 
 (provide 'open-conf)
 
