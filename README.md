@@ -25,7 +25,6 @@ open-conf` an Emacs package, allows you to open files quickly via **M-x command*
 
   ```elisp
   (defun-open-conf  "bashrc"          "~/.bashrc")
-  (defun-open-conf  "zshrc"           "~/.zshrc")
   (defun-open-conf  "etc-hosts-root"  "/sudo:root@localhost:/etc/hosts") ;; Open file with root
   ```
 
@@ -39,9 +38,7 @@ open-conf` an Emacs package, allows you to open files quickly via **M-x command*
      :config
      (progn
      (defun-open-conf  "bashrc"          "~/.bashrc")
-     (defun-open-conf  "zshrc"           "~/.zshrc")
-     (defun-open-conf  "etc-hosts-root"  "/sudo:root@localhost:/etc/hosts") ;; Open file with root
-     (defun-open-conf  "dnsmasq-root"    "/sudo:root@localhost:/etc/dnsmasq.conf")))
+     (defun-open-conf  "etc-hosts-root"  "/sudo:root@localhost:/etc/hosts"))) ;; Open file with root
 ```
 
 
@@ -55,6 +52,5 @@ open-conf` an Emacs package, allows you to open files quickly via **M-x command*
 :repo "enisozgen/open-conf")
 :config
 (defun-open-conf  "bashrc"          "~/.bashrc")
-(defun-open-conf  "etc-hosts-root"  "/sudo:root@localhost:/etc/hosts") ;; Open file with root
-(defun-open-conf  "dnsmasq-root"    "/sudo:root@localhost:/etc/dnsmasq.conf"))
+(defun-open-conf  "etc-hosts-root"  "/sudo:root@localhost:/etc/hosts")) ;; Open file with root
 ```
