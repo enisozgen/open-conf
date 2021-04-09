@@ -34,13 +34,16 @@
 ;;; Code:
 
 (defmacro defun-open-conf (config-name filepath)
-  "Open conf macro"
+  "Open conf macro.
+Argument CONFIG-NAME Alias name for your function.
+Argument FILEPATH Filepath of the file."
   `(defun ,(intern (format "open-conf-%s" config-name)) ()
      ,(format "Open %s: \"%s\"" config-name filepath)
      (interactive)
      (open-conf ,filepath)))
 
 (defun open-conf (filepath)
+  "Argument FILEPATH Filepath of the file."
   (switch-to-buffer
    (find-file-noselect filepath)))
 
