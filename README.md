@@ -3,7 +3,7 @@
 
 # `open-conf`
 
-`open-conf` an Emacs package, allows you to open files quickly via **M-x command** with given alias.
+open-conf` an Emacs package, allows you to open files quickly via **M-x command** with given alias.
 
 
 # How it works
@@ -42,4 +42,19 @@
      (defun-open-conf  "zshrc"           "~/.zshrc")
      (defun-open-conf  "etc-hosts-root"  "/sudo:root@localhost:/etc/hosts") ;; Open file with root
      (defun-open-conf  "dnsmasq-root"    "/sudo:root@localhost:/etc/dnsmasq.conf")))
+```
+
+
+### straight.el
+
+```elisp
+(use-package open-conf
+:straight '(open-conf
+:type git
+:host github
+:repo "enisozgen/open-conf")
+:config
+(defun-open-conf  "bashrc"          "~/.bashrc")
+(defun-open-conf  "etc-hosts-root"  "/sudo:root@localhost:/etc/hosts") ;; Open file with root
+(defun-open-conf  "dnsmasq-root"    "/sudo:root@localhost:/etc/dnsmasq.conf"))
 ```
