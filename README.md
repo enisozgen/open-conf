@@ -25,6 +25,6 @@
      (progn
      (defun-open-conf  "bashrc"          "~/.bashrc")
      (defun-open-conf  "zshrc"           "~/.zshrc")
-     (defun-open-conf  "etc-hosts-root"  "/sudo:root@localhost:/etc/hosts")
+     (defun-open-conf  "etc-hosts-root"  "/sudo:root@localhost:/etc/hosts") ;; Open file with root
      (defun-open-conf  "dnsmasq-root"    "/sudo:root@localhost:/etc/dnsmasq.conf")))
 ```
